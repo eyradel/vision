@@ -263,7 +263,7 @@ while(cap.isOpened()):
     for i in persons:
 
         cv.putText(frame, str(i.getId()),(i.getX(),i.getY()),font,0.3,i.getRGB(),1,cv.LINE_AA)
-        cv.putText(frame,"ID"+ str(i.getId()),(x+w,y+h),font,1,i.getRGB(),3,cv.LINE_AA)
+        
         cv.imwrite("ID/"+str(' '+str(di)+' '+' '+' '+m+' '+str(Y))+' '+'ID'+str(i.getId())+'.jpg',frame)
     total = cnt_down+cnt_up
     str_up = 'UP: '+ str(cnt_up)
