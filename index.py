@@ -125,7 +125,7 @@ output=cv.VideoWriter("video footage/"+d+' '+' '+str(di)+' '+' '+m+' '+str(Y)+ "
 
 out_frame=cv.VideoWriter("video footage/"+d+' '+' '+str(di)+' '+' '+m+' '+str(Y)+ "heat"+  '.mp4',fourcc,20.0,(640,480))
 
-cap = cv.VideoCapture(r"D:\Documents\db\PeopleCounter\Test Files\TestVideo.avi")
+cap = cv.VideoCapture(r"D:\Documents\db\PeopleCounter\feed\feed.avi")
 # address = "http://192.168.43.63:8080/video"
 # cap.open(address)
 
@@ -280,11 +280,11 @@ while(cap.isOpened()):
     cv.putText(frame, str_down ,(50,90),font,0.6,(255,0,0),1,cv.LINE_AA)
     cv.putText(frame,f"Total number : {total}" ,(50,140),font,0.6,(255,0,0),1,cv.LINE_AA)
     cv.putText(frame, f"BAT {percent}% {plugged}" ,(50,190),font,0.6,(255,0,0),1,cv.LINE_AA)
-    cv2.rectangle(frame, (0,0), (6400, 40), (215, 110, 12), -1)
-    cv2.putText(frame, "Tracking Program ", (30,30), 
-                       cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
+    cv.rectangle(frame, (0,0), (6400, 40), (215, 110, 12), -1)
+    cv.putText(frame, "Tracking Program ", (30,30), 
+                       cv.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv.LINE_AA)
     
-    cv2.rectangle(frame, (0,0), (25, 6440), (215, 110, 12), -1)
+    cv.rectangle(frame, (0,0), (25, 6440), (215, 110, 12), -1)
     hsv = cv.cvtColor(frame,cv.COLOR_BGR2HSV)
     
     
